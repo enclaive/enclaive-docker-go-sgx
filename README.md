@@ -5,36 +5,36 @@
     <tr> 
       <td align="center">
         <a href="https://enclaive.io/products/c">
-          <img alt="c-sgx" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg">
+          <img alt="c-sgx" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons//go/go-original.svg">
         </a>
-        <br>C-SGX</td>     
+        <br>Go-SGX</td>     
       </td>  
     </tr>
     </table>
 
 
-  <h2 align="center">C-SGX: Execute C applications in the safest Confidential Compute runtime</h2>
+  <h2 align="center">Go-SGX: Execute Go applications in the safest Confidential Compute runtime</h2>
 
   <p align="center">
     <h3>packed by <a href="https://enclaive.io">enclaive</a></h3>
     </br>
-    #intelsgx #confidentialcompute #c
+    #intelsgx #confidentialcompute #go-lang
     <br />
     <a href="#contributing">Contribute</a>
     ·
-    <a href="https://github.com/enclaive/enclaive-docker-c-sgx/issues">Report Bug</a>
+    <a href="https://github.com/enclaive/enclaive-docker-go-sgx/issues">Report Bug</a>
     ·
-    <a href="https://github.com/enclaive/enclaive-docker-c-sgx/issues">Request Feature</a>
+    <a href="https://github.com/enclaive/enclaive-docker-go-sgx/issues">Request Feature</a>
   </p>
 </div>
 
 
 <!-- INTRODCUTION -->
-## What is C and SGX?
+## What is Go and SGX?
 
-> C is a programming language designed by Dennis Ritchie at Bell Labs. C is very widely used, straightforward, and can be compiled to a number of platforms and operating systems. C is an imperative language, with a small number of keywords and a large number of mathematical operators. C is also a very low level programming language, which means it can communicate directly with hardware.
+> Go is a programming language built to resemble a simplified version of the C programming language. It compiles at the machine level. Go was created at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson.
 
-[Overview of C](https://www.open-std.org/jtc1/sc22/wg14/)
+[Overview of Go](https://go.dev/)
 
 > Intel Security Guard Extension (SGX) delivers advanced hardware and RAM security encryption features, so called enclaves, in order to isolate code and data that are specific to each application. When data and application code run in an enclave additional security, privacy and trust guarantees are given, making the container an ideal choice for (untrusted) cloud environments.
 
@@ -48,12 +48,12 @@ Application code executing within an Intel SGX enclave:
 - Reduces the trusted computing base of its parent application to the smallest possible footprint
 
 <!-- WHY -->
-## Why use C-SGX (instead of "vanilla" Pyhton) images?
-Following benefits come for free with C-SGX :
+## Why use Go-SGX (instead of "vanilla" Pyhton) images?
+Following benefits come for free with Go-SGX :
 
-* Protect Clang code, files, applications, services, APIs, (AI) models against intelectual property theft/violation irrespectively where the application runs thanks to full fledge memory container encryption and integrity protection at runtime
+* Protect Golang code, files, applications, services, APIs, (AI) models against intelectual property theft/violation irrespectively where the application runs thanks to full fledge memory container encryption and integrity protection at runtime
 * Shield container application against container escape attacks with hardware-graded security against kernel-space exploits, malicious and accidental privilege [insider](https://www.ibm.com/topics/insider-threats) attacks, [UEFI firmware](https://thehackernews.com/2022/02/dozens-of-security-flaws-discovered-in.html) exploits and other "root" attacks using the corruption of the application to infiltrate your network and system
-* Build and deploy Clang application as usual while inheriting literally for free security and privacy through containerization including
+* Build and deploy Golang application as usual while inheriting literally for free security and privacy through containerization including
     * strictly better TOMs (technical and organizatorial measures)
     * privacy export regulations compliant deployment anywhere, such as [Schrems-II](https://www.europarl.europa.eu/RegData/etudes/ATAG/2020/652073/EPRS_ATA(2020)652073_EN.pdf)
     * GDPR/CCPA compliant processing ("data in use") of user data (in the cloud) as data is relatively anonymized thanks to the enclave
@@ -62,14 +62,14 @@ Following benefits come for free with C-SGX :
 ## TL;DR
 
 ```sh
-docker pull enclaive/c-sgx
+docker pull enclaive/go-sgx
 docker-compose up -d
 ```
 **Warning**: This quick setup is only intended for development environments. You are encouraged to change the insecure default credentials and check out the available configuration options in the [build](#build-the-image) section for a more secure deployment.
 
 
 <!-- DEPLOY IN THE CLOUD -->
-## How to deploy C-SGX in a zero-trust cloud?
+## How to deploy Go-SGX in a zero-trust cloud?
 
 The following cloud infrastractures are SGX-ready out of the box
 * [Microsoft Azure Confidential Cloud](https://azure.microsoft.com/en-us/solutions/confidential-compute/) 
@@ -124,18 +124,18 @@ Use `docker run hello-world` to check if you can run docker (without sudo).
 <!-- GET THIS IMAGE -->
 ## Get this image
 
-The recommended way to get the enclaive C-SGX Open Source Docker Image is to pull the prebuilt image from the [Docker Hub Registry](https://hub.docker.com/r/enclaive/c-sgx).
+The recommended way to get the enclaive Go-SGX Open Source Docker Image is to pull the prebuilt image from the [Docker Hub Registry](https://hub.docker.com/r/enclaive/go-sgx).
 
 ```console
 docker pull enclaive/python-sgx:latest
 ```
 
 To use a specific version, you can pull a versioned tag. You can view the
-[list of available versions](https://hub.docker.com/r/enclaive/c-sgx/tags/)
+[list of available versions](https://hub.docker.com/r/enclaive/go-sgx/tags/)
 in the Docker Hub Registry.
 
 ```console
-docker pull enclaive/c-sgx:[TAG]
+docker pull enclaive/go-sgx:[TAG]
 ```
 
 <!-- BUILD THE IMAGE -->
@@ -143,7 +143,7 @@ docker pull enclaive/c-sgx:[TAG]
 If you wish, you can also build the image yourself.
 
 ```console
-docker build -t enclaive/c-sgx:latest 'https://github.com/enclaive/enclaive-docker-c-sgx.git#master'
+docker build -t enclaive/go-sgx:latest 'https://github.com/enclaive/enclaive-docker-go-sgx.git#master'
 ```
 
 
@@ -157,7 +157,7 @@ Run
 ``
 docker-compose up -d
 ``
-to start the enclaved C application.
+to start the enclaved go application.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -193,7 +193,7 @@ This project greatly celebrates all contributions from the gramine team. Special
 
 * [Gramine Project](https://github.com/gramineproject)
 * [Intel SGX](https://github.com/intel/linux-sgx-driver)
-* [Clang](https://www.open-std.org/jtc1/sc22/wg14/)
+* [Golang](https://go.dev/)
 
 
 ## Trademarks 
