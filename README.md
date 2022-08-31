@@ -127,7 +127,7 @@ Use `docker run hello-world` to check if you can run docker (without sudo).
 The recommended way to get the enclaive Go-SGX Open Source Docker Image is to pull the prebuilt image from the [Docker Hub Registry](https://hub.docker.com/r/enclaive/go-sgx).
 
 ```console
-docker pull enclaive/python-sgx:latest
+docker pull enclaive/go-sgx:latest
 ```
 
 To use a specific version, you can pull a versioned tag. You can view the
@@ -149,7 +149,9 @@ docker build -t enclaive/go-sgx:latest 'https://github.com/enclaive/enclaive-doc
 
 ## Modify the image
 
-todo
+Add the golang program to folder 
+```/app``` 
+and the program is run in a confidential compute environment.
 
 <!-- RUN THE IMAGE -->
 ## Run the image
