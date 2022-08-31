@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  golang-sgx:
+    image: enclaive/golang-sgx
+    container_name: "golang-sgx"
+    build:
+      context: .
+    devices:
+      - "/dev/sgx_enclave:/dev/sgx_enclave"
+  golang:
+    image: enclaive/golang-sgx
+    container_name: "golang"
+    entrypoint: ""
+    command: "/app/app"
+    build:
+      context: .
