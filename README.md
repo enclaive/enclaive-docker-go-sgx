@@ -146,6 +146,8 @@ If you wish, you can also build the image yourself.
 docker build -t enclaive/go-sgx:latest 'https://github.com/enclaive/enclaive-docker-go-sgx.git#master'
 ```
 
+## Test the image
+The console outputs `Hello World`.
 
 ## Modify the image
 
