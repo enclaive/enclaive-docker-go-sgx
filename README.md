@@ -1,5 +1,7 @@
-SGX golang demonstration
+# Go-SGX Demonstration
 
+The goal of the demonstration is to show that files in a confidential container are protected. In the example case we run an HTTPS server written in golang
+and protect the TLS X509 server certificate private key `/tmp/server.key`. We show that in the confidential container the key is inaccessible while in the standard container it is. The rationality is that the confidential container mounts in the enclave the file system `/tmp/server.key` being accessible only within the enclave.
 
 ## Building and Running
 
