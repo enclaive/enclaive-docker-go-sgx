@@ -63,7 +63,7 @@ Following benefits come for free with Go-SGX :
 
 ```sh
 docker pull enclaive/go-sgx
-docker-compose up -d
+docker compose up -d
 ```
 **Warning**: This quick setup is only intended for development environments. You are encouraged to change the insecure default credentials and check out the available configuration options in the [build](#build-the-image) section for a more secure deployment.
 
@@ -116,7 +116,7 @@ Install the DCAP drivers from the Intel SGX [repo](https://github.com/intel/linu
 Install the docker engine
 ```sh
  sudo apt-get update
- sudo apt-get install docker-ce docker-ce-cli containerd.io
+ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
  sudo usermod -aG docker $USER    # manage docker as non-root user (obsolete as of docker 19.3) 
 ```
 Use `docker run hello-world` to check if you can run docker (without sudo).
@@ -157,7 +157,7 @@ and the program is run in a confidential compute environment.
 ## Run the image
 Run
 ``
-docker-compose up -d
+docker compose up -d
 ``
 to start the enclaved go application.
 
