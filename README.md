@@ -4,37 +4,37 @@
     <table>
     <tr> 
       <td align="center">
-        <a href="https://enclaive.io/products/golang">
-          <img alt="golang-sgx" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons/golang/golang-plain.svg">
+        <a href="https://enclaive.io/products/c">
+          <img alt="c-sgx" height=64px src="https://raw.githubusercontent.com/devicons/devicon/master/icons//go/go-original.svg">
         </a>
-        <br>Golang-SGX</td>     
+        <br>Go-SGX</td>     
       </td>  
     </tr>
     </table>
 
 
-  <h2 align="center">Golang-SGX: Execute Golang applications in the safest Confidential Compute runtime</h2>
+  <h2 align="center">Go-SGX: Execute Go applications in the safest Confidential Compute runtime</h2>
 
   <p align="center">
     <h3>packed by <a href="https://enclaive.io">enclaive</a></h3>
     </br>
-    #intelsgx # confidentialcompute #dont-trust-a-cloud
+    #intelsgx #confidentialcompute #go-lang
     <br />
     <a href="#contributing">Contribute</a>
     ·
-    <a href="https://github.com/enclaive/enclaive-docker-golang-sgx/issues">Report Bug</a>
+    <a href="https://github.com/enclaive/enclaive-docker-go-sgx/issues">Report Bug</a>
     ·
-    <a href="https://github.com/enclaive/enclaive-docker-golang-sgx/issues">Request Feature</a>
+    <a href="https://github.com/enclaive/enclaive-docker-go-sgx/issues">Request Feature</a>
   </p>
 </div>
 
 
 <!-- INTRODCUTION -->
-## What is Golang and SGX?
+## What is Go and SGX?
 
-> Go is a statically typed, compiled programming language designed at Google by Robert Griesemer, Rob Pike, and Ken Thompson. It is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency.
+> Go is a programming language built to resemble a simplified version of the C programming language. It compiles at the machine level. Go was created at Google in 2007 by Robert Griesemer, Rob Pike, and Ken Thompson.
 
-[Overview of Golang](https://go.dev/)
+[Overview of Go](https://go.dev/)
 
 > Intel Security Guard Extension (SGX) delivers advanced hardware and RAM security encryption features, so called enclaves, in order to isolate code and data that are specific to each application. When data and application code run in an enclave additional security, privacy and trust guarantees are given, making the container an ideal choice for (untrusted) cloud environments.
 
@@ -48,28 +48,28 @@ Application code executing within an Intel SGX enclave:
 - Reduces the trusted computing base of its parent application to the smallest possible footprint
 
 <!-- WHY -->
-## Why use Golang-SGX (instead of "vanilla" Golang) images?
-Following benefits come for free with Golang-SGX :
+## Why use Go-SGX (instead of "vanilla" Pyhton) images?
+Following benefits come for free with Go-SGX :
 
-* Protect Golang data, applications, services, APIs, AI models against intelectual property theft/violation irrespectively where the container runs thanks to full fledge memory container encryption and integrity protection at runtime
-* Shield container application against container escalation attacks with hardened security against kernel-space exploits, malicious and accidental privilege [insider](https://www.ibm.com/topics/insider-threats) attacks, [UEFI firmware](https://thehackernews.com/2022/02/dozens-of-security-flaws-discovered-in.html) exploits and other "root" attacks using the corruption of the application to infiltrate your network and system
-* Build and deploy golang application as usual while inheriting literally for free security and privacy through containerization including
+* Protect Golang code, files, applications, services, APIs, (AI) models against intelectual property theft/violation irrespectively where the application runs thanks to full fledge memory container encryption and integrity protection at runtime
+* Shield container application against container escape attacks with hardware-graded security against kernel-space exploits, malicious and accidental privilege [insider](https://www.ibm.com/topics/insider-threats) attacks, [UEFI firmware](https://thehackernews.com/2022/02/dozens-of-security-flaws-discovered-in.html) exploits and other "root" attacks using the corruption of the application to infiltrate your network and system
+* Build and deploy Golang application as usual while inheriting literally for free security and privacy through containerization including
     * strictly better TOMs (technical and organizatorial measures)
     * privacy export regulations compliant deployment anywhere, such as [Schrems-II](https://www.europarl.europa.eu/RegData/etudes/ATAG/2020/652073/EPRS_ATA(2020)652073_EN.pdf)
-    * GDPR/CCPA compliant processing ("data in use") of user data (in the cloud) as data is anonymized thanks to the enclave
+    * GDPR/CCPA compliant processing ("data in use") of user data (in the cloud) as data is relatively anonymized thanks to the enclave
 
 <!-- TL;TD --> 
 ## TL;DR
 
 ```sh
-docker pull enclaive/golang-sgx
+docker pull enclaive/go-sgx
 docker-compose up -d
 ```
 **Warning**: This quick setup is only intended for development environments. You are encouraged to change the insecure default credentials and check out the available configuration options in the [build](#build-the-image) section for a more secure deployment.
 
 
 <!-- DEPLOY IN THE CLOUD -->
-## How to deploy Golang-SGX in a zero-trust cloud?
+## How to deploy Go-SGX in a zero-trust cloud?
 
 The following cloud infrastractures are SGX-ready out of the box
 * [Microsoft Azure Confidential Cloud](https://azure.microsoft.com/en-us/solutions/confidential-compute/) 
@@ -124,18 +124,18 @@ Use `docker run hello-world` to check if you can run docker (without sudo).
 <!-- GET THIS IMAGE -->
 ## Get this image
 
-The recommended way to get the enclaive Golang-SGX Open Source Docker Image is to pull the prebuilt image from the [Docker Hub Registry](https://hub.docker.com/r/enclaive/golang-sgx).
+The recommended way to get the enclaive Go-SGX Open Source Docker Image is to pull the prebuilt image from the [Docker Hub Registry](https://hub.docker.com/r/enclaive/go-sgx).
 
 ```console
-docker pull enclaive/golang-sgx:latest
+docker pull enclaive/python-sgx:latest
 ```
 
 To use a specific version, you can pull a versioned tag. You can view the
-[list of available versions](https://hub.docker.com/r/enclaive/golang-sgx/tags/)
+[list of available versions](https://hub.docker.com/r/enclaive/go-sgx/tags/)
 in the Docker Hub Registry.
 
 ```console
-docker pull enclaive/golang-sgx:[TAG]
+docker pull enclaive/go-sgx:[TAG]
 ```
 
 <!-- BUILD THE IMAGE -->
@@ -143,32 +143,13 @@ docker pull enclaive/golang-sgx:[TAG]
 If you wish, you can also build the image yourself.
 
 ```console
-docker build -t enclaive/golang-sgx:latest 'https://github.com/enclaive/enclaive-docker-golang-sgx.git#master'
+docker build -t enclaive/go-sgx:latest 'https://github.com/enclaive/enclaive-docker-go-sgx.git#master'
 ```
 
-The build process of the image contains two stages
-* First Stage ("builder"): uses the official Golang Docker image to compile the [project](hello_world) to an executable using cargo
-* Second Stage: Gathers all additional required resources, generates the manifest form [template](golang.manifest.template) and signs it
-
-During the build, `ARG projectName` specifies the name of the project directory and executable. Further
-`ARG webFiles` specifies the directory for *.html, *.js, ... . Both are defined in the [docker-compose.yml](docker-compose.yml)
-
-If more packages are required during build or runtime, they can be added to the `package.txt` or `build/package.txt`
-to install them during the build.
-
-After the build is finished, the app environment looks like this by default
-```
-/entrypoint/
- + app #executable
- + $webFiles/
-    + *.html
-```
 
 ## Modify the image
-To run another Golang executable, it is enough to replace the `hello_world` project with yours and change the argument `projectName` in [docker-compose.yml](docker-compose.yml) to your project name.
-The same applies to the argument `webFiles`; if not needed, this part can be removed.
 
-**Note:** After the image is built the `$webFiles` are located in `/entrypoint/$webFiles/`.
+todo
 
 <!-- RUN THE IMAGE -->
 ## Run the image
@@ -176,14 +157,7 @@ Run
 ``
 docker-compose up -d
 ``
-to start the golang application.
-
-<!-- TEST THE IMAGE -->
-## Test the image
-Run 
-``curl -k https://{your_host_ip}`` 
-the console prints `Hello`.
-
+to start the enclaved go application.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -204,7 +178,7 @@ Don't forget to give the project a star! Spread the word on social media! Thanks
 <!-- LICENSE -->
 ## License
 
-Distributed under the GPLv3 License. See `LICENSE` for further information.
+Distributed under the Apache 2.0 License. See `LICENSE` for further information.
 
 <!-- CONTACT -->
 ## Contact
@@ -219,10 +193,9 @@ This project greatly celebrates all contributions from the gramine team. Special
 
 * [Gramine Project](https://github.com/gramineproject)
 * [Intel SGX](https://github.com/intel/linux-sgx-driver)
-* [Golang](https://go.dev)
+* [Golang](https://go.dev/)
 
 
 ## Trademarks 
 
 This software listing is packaged by enclaive.io. The respective trademarks mentioned in the offering are owned by the respective companies, and use of them does not imply any affiliation or endorsement. 
-
