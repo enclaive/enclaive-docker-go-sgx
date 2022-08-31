@@ -1,9 +1,9 @@
 version: '2'
 
 services:
-  golang-sgx:
-    image: enclaive/golang-sgx
-    container_name: "golang-sgx"
+  go-sgx:
+    image: enclaive/go-sgx
+    container_name: "go-sgx"
     build:
       context: .
     ports:
