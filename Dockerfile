@@ -1,5 +1,3 @@
-# mariadb with patches
-
 FROM enclaive/gramine-os:jammy-7e9d6925
 
 RUN apt-get update \
