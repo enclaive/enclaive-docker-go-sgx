@@ -31,7 +31,8 @@
 <tr>
      <td align="center" width:"25%">
         <a href="https://www.youtube.com/watch?v=8vNTEViE-dU"><img src="https://img.youtube.com/vi/8vNTEViE-dU/0.jpg"></img></a>
-        <br>Demo: Running Go HTTPS in Cofindential Compute Container</td> 
+        <br>Demo: Running Go HTTPS in Cofindential Compute Container (<a href="https://github.com/enclaive/enclaive-docker-go-sgx/tree/demo">read more</a>)
+        </td> 
      </td>
  </tr>
  </table>
@@ -67,7 +68,7 @@ Application code executing within an Intel SGX enclave:
 - Reduces the trusted computing base of its parent application to the smallest possible footprint
 
 <!-- WHY -->
-## Why use Go-SGX (instead of "vanilla" Pyhton) images?
+## Why use Go-SGX (instead of "vanilla" Golang Runtime) images?
 Following benefits come for free with Go-SGX :
 
 * Protect Golang code, files, applications, services, APIs, (AI) models against intelectual property theft/violation irrespectively where the application runs thanks to full fledge memory container encryption and integrity protection at runtime
