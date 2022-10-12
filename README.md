@@ -30,7 +30,7 @@
 <table style="width:100%">
 <tr>
      <td align="center" width:"25%">
-        <a href="https://www.youtube.com/watch?v=8vNTEViE-dU"><img src="https://img.youtube.com/vi/8vNTEViE-dU/0.jpg"></img></a>
+        <a href="https://www.youtube.com/watch?v=GCe4HKyq1X0"><img src="https://img.youtube.com/vi/GCe4HKyq1X0/0.jpg"></img></a>
         <br>Demo: Running Go HTTPS in Cofindential Compute Container (<a href="https://github.com/enclaive/enclaive-docker-go-sgx/tree/demo">read more</a>)
         </td> 
      </td>
